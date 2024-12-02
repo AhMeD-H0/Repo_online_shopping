@@ -1,0 +1,50 @@
+Online Shopping System Proposal
+
+1. Introduction
+The Online Shopping System is designed to provide users with a seamless and efficient platform for purchasing products. 
+This platform enables users to browse products, add items to their cart, place orders, and make payments, while administrators can manage product listings and user accounts.
+
+2. Functional Requirements
+ User Features:
+- User registration and login.
+- search products by categories.
+- Add products to the shopping cart.
+- Place orders and make payments.
+
+
+Admin Features:
+- Add, update, and delete products.
+- View sales reports.
+
+
+System Features:
+- Validate user login and manage sessions.
+- Update product stock levels dynamically.
+- Process payments securely.
+
+3. Non-Functional Requirements
+- Performance: The system should support 1000 concurrent users with response times under 3 seconds.
+- Security: Secure user data using encryption for passwords and sensitive information.
+- Usability: Intuitive interface for both customers and administrators.
+
+4. Development Plan
+Agile Methodology:
+- Use Scrum with two-week sprints.
+- Weekly stand-ups to track progress.
+- Continuous Integration/Continuous Deployment (CI/CD) pipeline.
+
+Tools:
+-Version Control: Git and GitHub.
+-Project Management: Trello.
+-Development: Django for the backend, html&css for the frontend.
+
+Deliverables:
+- Sprint 1: Backend setup with django 
+- Sprint 2: conect html files to django
+
+
+
+
+
+
+
