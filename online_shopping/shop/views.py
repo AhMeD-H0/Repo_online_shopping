@@ -1,8 +1,8 @@
-from django.urls import path
-from . import views
-
-urlpatterns = [
-path("", views.home, name='home')
+from django.shortcuts import render , HttpResponse
 
 
-]
+# Create your views here.
+
+
+def home(request):
+ return render(request,"main_code.html")
