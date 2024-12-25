@@ -86,7 +86,7 @@ DATABASES = {
         # 'HOST': '127.0.0.1',
         'HOST': 'localhost',
         'PORT': '5432',
-        'NAME': 'my_database2',
+        'NAME': 'my_database',
         'PASSWORD': 'ah@223500',
         
     }
