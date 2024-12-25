@@ -49,6 +49,7 @@ jobs:
         DATABASE_URL: postgres://postgres:postgres@postgres:5432/my_database
       run: |
         cd Django-Online_shop1/
+        pip install sorl-thumbnail
         python manage.py makemigrations
         python manage.py migrate
 
