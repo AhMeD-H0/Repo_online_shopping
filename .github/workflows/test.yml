@@ -50,7 +50,8 @@ jobs:
       run: |
         cd Django-Online_shop1/
         pip install sorl-thumbnail
-        pip uninstall suds
+        pip install suds
+        pip install zeep
         pip install suds-jurko
         python manage.py makemigrations
         python manage.py migrate
