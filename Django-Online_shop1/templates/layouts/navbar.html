@@ -1,0 +1,179 @@
+{% comment %} <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="container-fluid">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{% url 'shop:home' %}">Home</a>
+                {% if request.user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+                {% else %}
+                   
+                    <a class="nav-item nav-link" href="{% url 'accounts:login' %}">Login</a>
+                    <a class="nav-item nav-link" href="{% url 'accounts:register' %}">Register</a>
+                    
+                    <a class="nav-item nav-link"  href="{% url 'cart:detail' %}"><img src="shopping-bag.png">Cart</a>
+                     
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</nav> {% endcomment %}
+
+
+{% comment %} ======================================================= {% endcomment %}
+{% comment %} {% load static %}
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="container-fluid">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{% url 'shop:home' %}">Home</a>
+                {% if request.user.is_authenticated %}
+
+         
+                    
+                    <a class="nav-item nav-link" href="{% url 'accounts:logout' %}">🔐  Logout</a>
+                {% else %}
+                    <a class="nav-item nav-link"  href="{% url 'cart:detail' %}">🛒  Cart</a>
+                   
+                    <a class="nav-item nav-link" href="{% url 'accounts:login' %}">🔓  Login</a>
+                    <a class="nav-item nav-link" href="{% url 'accounts:register' %}">®️  Register</a>
+                    
+                {% endif %}
+
+                
+
+        <form class="d-flex mx-auto" method="get" >
+            <input class="form-control me-2" type="search" placeholder="Search ..." name="q">
+            <button class="btn btn-outline-secondary" type="submit">🔍</button>
+        </form>
+            </div>
+        </div>
+    </div>
+</nav>  {% endcomment %}
+
+{% comment %} ======================================================= {% endcomment %}
+
+{% comment %} {% load static %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Navbar</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+ <body>
+    <header> 
+        <nav class="navbar">
+            
+            <div class="logo">
+                <span>St<span class="bold">oRe</span></span>
+            </div> 
+
+            
+            
+            <ul class="categories">
+              
+              
+    
+            
+                <li><a href='/category/Electronics/'>Electronics</a></li>
+                <li><a href='/category/clothes/'>Electronics&gaming</a></li>
+              
+            </ul>
+       
+            
+
+            
+            <div class="search-container">
+                <form method="GET" action="{% url 'shop:search_products' %}">
+                    <input type="text" name="q" placeholder="Search for products..." required>
+                    <button type="submit" class="btn-primary" style="padding: 6px 12px; border: none;">Search</button>
+                </form>
+            </div>
+            
+
+           
+            <ul class="options">
+                <li><a href="#">HELP</a></li>
+                <li><a href="{% url 'shop:home' %}">HOME</a></li>
+                <li><a href="#">CONTACT</a></li>
+                
+            </ul>
+
+            <div class="user-actions">
+                <a href="{% url 'accounts:login' %}">Login</a>
+               
+                <a href="{% url 'accounts:logout' %}">  Logout</a>
+               
+                <a href="{% url 'accounts:register' %}">❤ Favorites</a>
+
+                <a href="{% url 'cart:detail' %}">🛒 Shopping Cart (0)</a>
+               
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
+ {% endcomment %}
+
+
+
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Custom Design</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+</head>
+<body>
+    <header> 
+        <nav class="navbar">
+            <div class="logo">
+                <span>St<span class="bold">oRe</span></span>
+            </div> 
+            
+            <!-- Categories -->
+            <ul class="categories">
+                <li><a href='/category/Electronics/'>Electronics</a></li>
+                <li><a href='/category/clothes/'>Electronics & Gaming</a></li>
+            </ul>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <form method="GET" action="{% url 'shop:search_products' %}">
+                    <input type="text" name="q" placeholder="Search for products..." required>
+                    <button type="submit" class="btn-primary"> </button>
+                </form>
+            </div>
+
+            <!-- Options -->
+            <ul class="options">
+                {% comment %} <li><a href="#">HELP</a></li> {% endcomment %}
+                <li><a href="{% url 'shop:home' %}">HOME</a></li>
+                <li><a href="{% url 'accounts:register' %}">Register</a></li>
+            </ul>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <a href="{% url 'accounts:login' %}">Login</a>
+                <a href="{% url 'accounts:logout' %}">Logout</a>
+                {% comment %} <a href="{% url 'accounts:register' %}">❤ Favorites</a> {% endcomment %}
+                <a href="{% url 'cart:detail' %} "> Shopping Cart </a>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
+
+
+
+

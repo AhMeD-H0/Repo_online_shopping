@@ -1,0 +1,186 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #fff;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Adjust padding for better fit */
+    background-color: #222223;
+    border-bottom: 1px solid #000000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 15px; /* Space between rows */
+}
+
+/* Logo Styling */
+.logo {
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.logo .bold {
+    font-weight: bold;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    list-style: none;
+    gap: 15px; /* Reduced gap for better alignment */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.categories li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    white-space: nowrap; /* Prevent text breaking */
+}
+
+.categories li a:hover {
+    color: #555;
+}
+
+
+
+.search-container button:hover {
+    background-color: #f2f2f2;
+}
+
+
+
+/* Search Bar */
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center align the search bar */
+    position: relative; /* Position relative for absolute child */
+    max-width: 600px; /* Limit the search bar width */
+}
+
+.search-container form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 0; /* Make rectangular */
+    overflow: hidden;
+    background-color: #fff; /* Ensure white background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 10px 15px; /* Padding for a neat look */
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Match text color to design */
+    placeholder-shown {
+        color: #aaa; /* Placeholder color */
+    }
+}
+
+.search-container button {
+    background: transparent;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Magnifying Glass Icon Styling */
+.search-container button::before {
+    content: "\2315"; /* Unicode for magnifying glass */
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow wrapping */
+    font-size: 1rem;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent breaking */
+}
+
+.user-actions a:hover {
+    color: #555;
+}
+
+/* Options Styling */
+.options {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    font-weight: 600;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.options li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.options li a:hover {
+    color: #555;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px; /* Space between elements */
+    }
+
+    .search-container {
+        margin: 10px 0;
+        max-width: 100%;
+    }
+
+    .categories, .user-actions, .options {
+        justify-content: center;
+        gap: 10px; /* Reduced gap for small screens */
+    }
+}

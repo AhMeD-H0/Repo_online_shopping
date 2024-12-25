@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h3>{{ product.name }}</h3>
+    <small>{{ product.created }}</small>
+    <p>{{ product.price }} $</p>
+    <img src="{{ product.image.url }}" width="200px" height="200px" alt="{{ product.name }}">
+    <hr/>
+    <p>{{ product.description }}</p>
+    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="btn btn-primary" value="Add to cart">
+       
+    </form>
+{% endblock %} {% endcomment %}
+
+
+{% load static %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
+
+<div class="cart-container">
+    <div class="cart-card">
+        <div class="cart-card-header">
+            <span>{{ product.name }}</span>
+        </div>
+        <div class="cart-card-body">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <p class="cart-card-text">Created on: {{ product.created }}</p>
+            <p class="cart-card-title">${{ product.price }}</p>
+            <p class="cart-card-text">{{ product.description }}</p>
+            <form action="{% url 'cart:cart_add' product.id %}" method="post" style="margin-top: 20px;">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" class="btn btn-primary" value="Add to cart">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

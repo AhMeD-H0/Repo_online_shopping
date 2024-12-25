@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: radial-gradient(circle, #000000, #1e1e1e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Register Container */
+.register-container {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Register Container */
+.register-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 30px 10px rgba(4, 132, 40, 0.4);
+}
+
+/* Title Styling */
+.register-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Description Styling */
+.register-description {
+    color: #ddd;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    background: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus Styling */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    background: #333;
+    box-shadow: 0px 0px 10px rgba(4, 132, 40, 0.4);
+}
+
+
+/* Target labels within form elements to make them bold */
+form p label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Ensure form inputs maintain the existing design */
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+/* Input Field Styling */
+form p input[type="text"],
+form p input[type="email"],
+form p input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    background: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus Styling */
+form p input[type="text"]:focus,
+form p input[type="email"]:focus,
+form p input[type="password"]:focus {
+    outline: none;
+    background: #333;
+    box-shadow: 0px 0px 10px rgba(0, 255, 55, 0.4);
+}
+
+
+/* Submit Button */
+.btn-primary {
+    color: #0c9342;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #0c9342;
+    padding: 12px;
+    border-radius: 8px;
+    background: transparent;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #0c9342;
+    color: #000;
+}
+
+/* Animation for Hover Effect */
+@keyframes pulse {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 20px;
+        width: 90%;
+    }
+}
