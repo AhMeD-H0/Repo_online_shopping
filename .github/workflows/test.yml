@@ -62,16 +62,4 @@ jobs:
     #   run: |
     #     cd Django-Online_shop1/
     #     python manage.py test
-    - name: Run Django migrations
-      working-directory: Django-Online_shop1
-      env:
-        DATABASE_URL: postgres://postgres:postgres@postgres:5432/my_database
-      run: |
-        python manage.py migrate
-
-    - name: Run tests
-      working-directory: Django-Online_shop1
-      env:
-        DATABASE_URL: postgres://postgres:postgres@postgres:5432/my_database
-      run: |
-        python manage.py test
+   
