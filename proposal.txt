@@ -36,21 +36,21 @@ Agile Methodology:
 
 Tools:
 -Version Control: Git and GitHub.
--Development: Django for the backend, html&css for the frontend.
+-Development: Django for the backend, HTML CSS for the frontend.
 
 Deliverables:
 phase 1
 
-- Sprint 1: Backend setup with django 
+- Sprint 1: Backend setup with Django 
 - Sprint 2: connect html files to Django
 
 Deliverables:
 phase 2 
 
 -Sprint 1: make apps (accounts , cart ,order)
--Sprint 2: make python codes for (models , views , urls ) for each app
+-Sprint 2: make python codes for (models , views , URLs) for each app
 -Sprint 3: add templates (html files) for each app
--Sprint 4: add css (design pages)
+-Sprint 4: add CSS (design pages)
 
 
 
