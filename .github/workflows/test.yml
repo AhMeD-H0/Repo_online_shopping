@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - ahmed
   pull_request:
     branches:
       - main
+      - ahmed
 
 jobs:
   test:
