@@ -23,30 +23,32 @@ jobs:
           POSTGRES_DB: test_db
 
     env:
-      DJANGO_SETTINGS_MODULE: your_project.settings
+      DJANGO_SETTINGS_MODULE: django_online_shop.settings
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: test_db
       DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
 
-      # Step 3: Run migrations
       - name: Run migrations
         run: |
+          cd Django-Online_shop1
           python manage.py makemigrations
           python manage.py migrate
 
-      # Step 4: Run tests
       - name: Run tests
-        run: python manage.py test
+        run: |
+          cd Django-Online_shop1
+          python manage.py test
