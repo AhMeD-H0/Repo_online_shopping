@@ -44,17 +44,17 @@ jobs:
         pip install django pytest pytest-django psycopg2-binary Pillow
        
 
-    - name: Run migrations
-      env:
-        DATABASE_URL: postgres://postgres:postgres@postgres:5432/my_database
-      run: |
-        cd Django-Online_shop1/
-        pip install sorl-thumbnail
-        # pip install suds
-        # pip install zeep
-        # pip install suds-jurko
-        # python manage.py makemigrations
-        python manage.py migrate
+    # - name: Run migrations
+    #   env:
+    #     DATABASE_URL: postgres://postgres:postgres@postgres:5432/my_database
+    #   run: |
+    #     cd Django-Online_shop1/
+    #     pip install sorl-thumbnail
+    #     # pip install suds
+    #     # pip install zeep
+    #     # pip install suds-jurko
+    #     # python manage.py makemigrations
+    #     python manage.py migrate
 
     - name: Run tests
       env:
