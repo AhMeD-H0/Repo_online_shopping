@@ -43,7 +43,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         if [[ "$RUNNER_OS" == "Windows" ]]; then
-          pip install pywin32==308
+          pip install pywin32==300
         fi
 
     - name: Run migrations
