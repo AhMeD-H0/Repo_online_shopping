@@ -49,7 +49,7 @@ jobs:
         DATABASE_URL: postgres://postgres:postgres@postgres:5432/my_database
       run: |
         cd Django-Online_shop1/
-        # pip install sorl-thumbnail
+        pip install sorl-thumbnail
         # pip install suds
         # pip install zeep
         # pip install suds-jurko
