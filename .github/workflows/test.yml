@@ -40,23 +40,13 @@ jobs:
         with:
           python-version: '3.9'
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          else
-            echo "requirements.txt not found, skipping dependency installation."
-            exit 1
-          fi
 
-      # Step 4: Run migrations
+      # Step 3: Run migrations
       - name: Run migrations
         run: |
           python manage.py makemigrations
           python manage.py migrate
 
-      # Step 5: Run tests
+      # Step 4: Run tests
       - name: Run tests
         run: python manage.py test
