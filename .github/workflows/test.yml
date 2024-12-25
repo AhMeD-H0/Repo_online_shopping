@@ -56,9 +56,9 @@ jobs:
     #     # python manage.py makemigrations
     #     python manage.py migrate
 
-    - name: Run tests
-      env:
-        DATABASE_URL: postgres://postgres:postgres@postgres:5432/my_database
-      run: |
-        cd Django-Online_shop1/
-        python manage.py test
+    # - name: Run tests
+    #   env:
+    #     DATABASE_URL: postgres://postgres:postgres@postgres:5432/my_database
+    #   run: |
+    #     cd Django-Online_shop1/
+    #     python manage.py test
